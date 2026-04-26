@@ -17,6 +17,16 @@ Class-4:
 1. setup auth route
 2. install hero ui & gravity icons
 
+Class -5:
+1. setup form with name, email & password
+2. get the value in the input field
+3. setup connection with db
+
+Class-6:
+1. setup alert for signup
+2. add signin form
+3. tested successful signin with the data of signup
+
 
 ### Technology Used
 1. Next Js

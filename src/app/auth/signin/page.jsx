@@ -1,52 +1,32 @@
-"use client"
-import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
+'use client'
+
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { Check } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
 
-const signUpPage = () => {
 
-    const onSubmit = async(e) => {
+const signInPage = () => {
+
+    const onSubmit = async(e) =>{
+        
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const userData = Object.fromEntries(formData.entries());
-        console.log("form submitted with:", userData)
+        console.log('submitted:', userData);
 
-        const {data, error} = await authClient.signUp.email({
-            name: userData.name,
+        const {data, error} = await authClient.signIn.email({
             email: userData.email,
             password: userData.password,
+            rememberMe: true,
             callbackURL: '/'
         })
-        console.log("signup response:", {data,error})
-        if(error){
-            alert("Error signing up: " + error.message)
-        }
-        if(data){
-            alert("SignUp successful!");
-        }
-
-
-    };
+        console.log('signin response:', {data,error})
+    }
 
     return (
         <div>
-            <h2>Please sign up</h2>
+            <h2>Please sign in</h2>
             <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
-
-                <TextField
-                    isRequired
-                    name="name"
-                    validate={(value) => {
-                        if (value.length < 3) {
-                            return "Name must be at least 3 characters";
-                        }
-                        return null;
-                    }}
-                >
-                    <Label>Name</Label>
-                    <Input name="name" placeholder="Your name" />
-                    <FieldError />
-                </TextField>
 
                 <TextField
                     isRequired
@@ -100,4 +80,4 @@ const signUpPage = () => {
     );
 };
 
-export default signUpPage;
+export default signInPage;
