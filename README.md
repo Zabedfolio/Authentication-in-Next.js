@@ -27,6 +27,11 @@ Class-6:
 2. add signin form
 3. tested successful signin with the data of signup
 
+Class-7:
+1. having a navbar from hero ui
+2. adding signup,signin,signout and welcome massage dynamically
+3. added eyeSlash button in password input field
+
 
 ### Technology Used
 1. Next Js
