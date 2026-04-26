@@ -1,5 +1,5 @@
 # Project Details
-Class-1: Learning how to install Authentication.
+Class-1: Learning how to install Authentication.<br>
 Class-2: 
 1. Created .env file
 2. added secret key & auth url
