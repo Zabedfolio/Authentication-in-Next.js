@@ -13,7 +13,13 @@ Class-3:
 3. setup URI in vscode using password
 4. connected connection string in auth.js
 
+Class-4:
+1. setup auth route
+2. install hero ui & gravity icons
+
 
 ### Technology Used
 1. Next Js
 2. Better Auth
+3. Hero UI
+4. Gravity Icons
